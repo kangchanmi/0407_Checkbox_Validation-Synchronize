@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: #9af;
+        }
+
+        * {
+            font-size: 24px;
+        }
+
+        fieldset {
+            width: 400px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        input[type=checkbox] {
+            width: 24px;
+            height: 24px;
+        }
+
+        table,
+        td {
+            width: 100%;
+            border: 1px solid #aaa;
+            border-collapse: collapse;
+        }
+
+        td#subChkboxArea {
+            border: none;
+            font-size: 18px;
+            display: flex;
+
+            flex-wrap: wrap;
+        }
+
+        #subChkboxArea input[type=checkbox] {
+            width: 16px;
+            height: 16px;
+        }
+        #subChkboxArea span {
+            width: 190px;
+            font-size: 16px;
+        }
+    </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+</head>
+
+<body>
+    <h1>체크박스 유효성 검사</h1>
+
+    <fieldset>
+        <legend>체크박스 검사</legend>
+        <input type="checkbox" id="chkAgree">
+        필수체크사항입니다.
+        <!-- checked는 checked = "true" 와 동일하며 결과화면에서 체크박스가
+                체크된 상태로 나타남. -->
+
+        <button type="button">확인</button>
+        <br><br>
+        <span id="res"></span>
+    </fieldset>
+
+    <fieldset id="synchronize">
+        <legend>체크박스 동기화(= 전체 체크/해제)</legend>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="wholeChk">전체동의
+                    </td>
+                </tr>
+                <tr>
+                    <td id="subChkboxArea">
+
+                        <span>
+                            <input type="checkbox" id="chk1" class="subChkbox">이용약관
+                        </span>
+                        <span>
+                            <input type="checkbox" id="chk2" class="subChkbox">개인정보 수집
+                        </span>
+
+                        <span>
+                            <input type="checkbox" id="chk3" class="subChkbox">개인정보 3자 제공
+                        </span>
+                        <span>
+                            <input type="checkbox" id="chk4" class="subChkbox">개인정보
+                        </span>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </fieldset>
+
+
+</body></html>
