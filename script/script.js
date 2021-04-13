@@ -44,9 +44,9 @@ $(function () {
             var chk4 = $("#chk4").prop("checked");
 
             if (chk1 && chk2 && chk3 && chk4) {
-                $(".subChkbox").prop("checked", "true");
+                $(".subChkbox").prop("checked", true);
             } else {
-                document.getElementById("wholeChk").checked = false;
+                $("#wholeChk").prop("checked", false);
             }
 
         });
